@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+     <!-- External CSS File -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <!-- jQuery URL -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+    <!-- External JS File -->
+    <script type="text/javascript" src="assets/script.js"></script>
+</head>
+<body>
+    <div class="container login-bg">
+        <section id="login">
+            <h1>Sign In</h1>
+            <form name="sign-in">
+                <input id="uname" type="text" placeholder="Enter Username" name="username" required/><br/>
+                <input id="password" type="password" placeholder="Enter Password" name="password" required/><br/>
+                <button id="login-btn" type="submit" value="Login" onclick="isLogRedirect(event)">Login</button>
+            </form>
+            <input id="rcheck" type="checkbox" checked="checked" name="remember"> Remember me 
+            <hr>
+            <br>
+            <p>Don't have account? <a href="#">Sign Up</a></p>
+        </section>
+    </div>
+</body>
+</html>

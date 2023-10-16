@@ -25,23 +25,31 @@ $(function() {
             "password": {
                 required: "<p style='color:red;margin:5px'>Please enter password.</p>"
             }
+        },
+        submitHandler: function (e) {
+            console.log('logged in');
         }
     })
+
+    $('#login-btn').click(function(e) {
+        $("#sign-in").valid();
+        let rcheck = $('#rcheck').is(':checked');
+        let uname = $('#uname').val();
+        if(rcheck && uname !== ''){
+            localStorage.uname = uname;
+        } else {
+            localStorage.uname = '';
+        }
+        
+        let password = $('#password').val();
+        let user = { "username": "test", "password": "Test@123"}
+        if(uname === user.username && password === user.password){
+            window.location = 'home.html'
+        }
+        e.preventDefault();
+    });
 })
 
-function isLogRedirect(e) { 
-    let rcheck = $('#rcheck').is(':checked');
-    let uname = $('#uname').val();
-    if(rcheck && uname !== ''){
-        localStorage.uname = uname;
-    } else {
-        localStorage.uname = '';
-    }
-    
-    let password = $('#password').val();
-    let user = { "username": "test", "password": "Test@123"}
-    if(uname === user.username && password === user.password){
-         window.location = 'home.html'
-    }
-    e.preventDefault();
+function isLogout() {
+    window.location = 'login.html';
 }

@@ -4,7 +4,7 @@
 }
 /***** Login CSS Start ******/
 .login-bg {
-    background-image: url('login-bg.jpg');
+    background-image: url('images/login-bg.jpg');
     background-size: cover;
 }
 .container {
@@ -52,6 +52,7 @@
     border: 1px solid rgb(34, 118, 203);
     font-size: 18px;
     color: #fff;
+    cursor: pointer;
 }
 #login input[type="checkbox"] {
     margin-bottom: 20px;
@@ -63,3 +64,61 @@
     background-color: rgb(43, 131, 219, 0.9);
 }
 /***** Login CSS End ******/
+
+/****** HOME CSS Start ******/
+#home-container {
+    position: relative;
+    min-height: 100vh;
+}
+.sticky {
+    top:0;
+    position: sticky; 
+}
+#navigation {
+    background-color: rgba(248, 236, 236, 0.7) ;
+    box-shadow: 0px 2px 5px rgba(154, 147, 147, 0.7);
+    padding:30px;
+}
+#navigation ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+#navigation ul li:last-child {
+    float: right;
+}
+#navigation ul li:last-child a {
+    background-color: rgb(205, 205, 250);
+    padding: 30px;
+}
+#navigation ul li a {
+    text-decoration: none;
+    color: #952a2a;
+    text-transform: uppercase;
+    padding: 30px;
+}
+#navigation ul li a:hover {
+    background-color: #c4adad;
+}
+.home-bg {
+    background-image: url('images/bootstrap-jv.jpg');
+    min-height: 800px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.htext{
+    text-align: center;
+    padding-top: 30px;
+    color: #fff;
+}
+#hfooter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.copyright {
+    background-color: #d6e2ea;
+    padding:30px;
+    text-align: center;
+}
+/****** HOME CSS End ******/

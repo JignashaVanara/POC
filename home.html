@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <!-- jQuery URL -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- External JS File -->
+    <script type="text/javascript" src="assets/script.js"></script>
 </head>
 <body>
-    <h1> Home </h1>
+    <div id="home-container">
+        <header class="sticky">
+            <nav id="navigation">
+                <ul>
+                    <li><a href="html-features.html" target="_blank">HTML</a></li>
+                    <li><a href="bootstrap.html" target="_blank">Bootstrap</a></li>
+                    <li><a href="angular.html" target="_blank">Angular</a></li>
+                    <li id="logout" onclick="isLogout()"><a href="#">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="hmain">
+            <div class="home-bg">
+                <div class="htext">
+                    <h1>Welcome... </h1>
+                </div>
+            </div>
+        </main>
+        <footer id="hfooter">
+            <div class="copyright">
+                POC Project. &copy; 2023 <br>
+                AB-XXX-XX-00-0001
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

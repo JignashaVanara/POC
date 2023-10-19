@@ -88,8 +88,15 @@
     float: right;
 }
 #navigation ul li:last-child a {
-    background-color: rgb(205, 205, 250);
+    /* background-color: rgb(205, 205, 250); */
+    background-color: #d6e2ea;
     padding: 30px;
+}
+.bnav ul{
+    margin:0;
+}
+.bnav {
+    padding: 27px !important;
 }
 #navigation ul li a {
     text-decoration: none;
@@ -97,8 +104,25 @@
     text-transform: uppercase;
     padding: 30px;
 }
-#navigation ul li a:hover {
+#navigation ul li a:hover, .active {
     background-color: #c4adad;
+}
+@media screen and (max-width: 768px) {
+    #navigation ul li {
+        display: block;
+        text-align: center;
+        padding: 20px;
+    }
+    #navigation ul{
+        padding: 0;
+    }
+    #logout {
+        clear: both;
+        float: none !important;
+    }
+    #navigation ul li:last-child a {
+        background-color: inherit;
+    }
 }
 .home-bg {
     background-image: url('images/bootstrap-jv.jpg');
@@ -112,13 +136,56 @@
     color: #fff;
 }
 #hfooter {
-    position: absolute;
-    bottom: 0;
+    /* position: absolute; */
+    /* bottom: 0; */
     width: 100%;
 }
 .copyright {
     background-color: #d6e2ea;
     padding:30px;
     text-align: center;
+}
+.html-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.html-main section {
+    margin: auto;
+    max-width: 400px;
+    border: 1px solid rgb(245, 245, 255);
+    border-radius: 10px;
+    line-height: 1.6;
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 5px 5px lightgrey;
+    text-align: center;
+}
+.html-main section img{
+    max-width: 400px;
+}
+.html-main section a {
+    text-decoration: none;
+}
+.html-heading h1{
+    font-weight: 200;
+    text-transform: uppercase;
+    color: #c4adad;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+.html-heading {
+    padding-bottom: 20px;
+    
+}
+.lighthr {
+    border: none;
+    border-bottom: 2px solid lightgrey ;
+    width:250px;
+    padding-top:10px;
+    margin: auto;
 }
 /****** HOME CSS End ******/

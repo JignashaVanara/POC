@@ -62,7 +62,7 @@
        -  Username: required, no uppercase letter
        -  Password: required, min 8 characters which includers special characters, digits, uppercase and lowercase letters
 
-   Home Page:   
+    Home Page:   
     1. This page contains navigation with 3 page links and one logout button.
     2. On click of nav links page will redirect to respective pages
     3. On click of logout button page will redirect to login page.  

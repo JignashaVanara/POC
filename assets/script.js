@@ -48,6 +48,55 @@ $(function() {
         }
         e.preventDefault();
     });
+
+    const drag = document.querySelector(".drag-file"),
+            uploadbutton = drag.querySelector("button"),
+            uploadinput = drag.querySelector("input");
+
+    const files = document.querySelector('.files');
+    let file; 
+
+    $(uploadbutton).click(function(){
+        uploadinput.click(); 
+    })
+
+    uploadinput.addEventListener("change", function(){
+        file = this.files[0];
+        fileUpload();
+    });
+
+    drag.addEventListener("dragover", (event)=>{
+        event.preventDefault();
+    });
+
+    drag.addEventListener("drop", (event)=>{
+        event.preventDefault(); 
+        file = event.dataTransfer.files[0];
+        fileUpload(); 
+    });
+
+    function fileUpload(){
+        let fileType = file.type; 
+        let validExtensions = ["image/jpeg", "image/jpg", "image/png"];
+        if(validExtensions.includes(fileType)){ 
+            let fileReader = new FileReader(); 
+            fileReader.onload = ()=>{
+            let fileURL = fileReader.result; 
+            let imgTag = `<img src="${fileURL}" alt="image">`;
+            $(files).append(imgTag);
+            }
+            fileReader.readAsDataURL(file);
+        }else{
+            alert("This is not an Image File!");
+        }
+    }
+
+    $('#bs_table').DataTable({
+        searching: true,
+        sorting: true,
+        paging: true
+    });
+
 })
 
 function isLogout() {

@@ -67,7 +67,7 @@
 
 /****** HOME CSS Start ******/
 #home-container {
-    position: relative;
+    /* position: relative; */
     min-height: 100vh;
 }
 .sticky {
@@ -87,7 +87,7 @@
 #navigation ul li:last-child {
     float: right;
 }
-#navigation ul li:last-child a {
+#navigation ul li:last-child a, .bs-logout{
     /* background-color: rgb(205, 205, 250); */
     background-color: #d6e2ea;
     padding: 30px;
@@ -104,8 +104,10 @@
     text-transform: uppercase;
     padding: 30px;
 }
-#navigation ul li a:hover, .active {
+#navigation ul li a:hover,#navigation ul li .active {
     background-color: #c4adad;
+    color: #fff;
+    font-weight: 600;
 }
 @media screen and (max-width: 768px) {
     #navigation ul li {
@@ -119,6 +121,9 @@
     #logout {
         clear: both;
         float: none !important;
+    }
+    .bs-logout {
+        margin-right: 0 !important;
     }
     #navigation ul li:last-child a {
         background-color: inherit;
@@ -169,7 +174,7 @@
 .html-main section a {
     text-decoration: none;
 }
-.html-heading h1{
+.html-heading h1, .fu-head{
     font-weight: 200;
     text-transform: uppercase;
     color: #c4adad;
@@ -189,3 +194,101 @@
     margin: auto;
 }
 /****** HOME CSS End ******/
+.bs-header nav{
+    background-color: rgba(248, 236, 236, 0.7);
+    padding: 0;
+}
+.bs-header .navbar-brand{
+    padding: 30px;
+}
+.nav-item {
+    color: #952a2a;
+    text-transform: uppercase;
+    padding: 30px !important;
+}
+.bs-header .active, .bs-header .nav-item:hover{
+    background-color: #c4adad;
+    color: #fff !important;
+    font-weight: 600;
+}
+.bs-header .navbar-brand{
+    color: #acc255;
+}
+.bs-logout {
+    margin-right: 40px
+}
+.drag-file{
+    border: 1px dashed #000;
+    height: 300px;
+    width: 350px;
+    border-radius: 5px;
+    font-weight:400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin:0 auto;
+    margin-top:30px;
+  }
+  .fu-head {
+    text-transform: capitalize;
+  }
+  .drag-file .icon{
+    font-size: 30px;
+    color: #000;
+  }
+  .drag-file h6{
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+  }
+  .drag-file span{
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+    margin: 10px 0 15px 0;
+  }
+  .drag-file button{
+    padding: 10px 25px;
+    font-size: 14px; 
+    font-weight: 300;
+    border: none;
+    outline: none;
+    background:transparent;
+    color: #000;
+    border:1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:all 0.5s;
+  }
+  
+  .drag-file button:hover{
+      background-color:#000;
+      color:red;
+  }
+  
+  .drag-file img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .files {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    width: 100%;
+  }
+.files img{
+    margin: 10px;
+    max-width: 400px;
+    min-height: 300px;
+}
+.bs-m {
+    overflow:auto;
+}
+#bs_table_wrapper {
+    width: 100%;
+    margin-top: 50px;
+    padding:20px;
+}

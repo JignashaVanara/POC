@@ -82,8 +82,8 @@
 
 ## Screenshots
     1. Website screenshots are available in Screenshots folder of project. 
-    
-    [Link for screenshots](https://github.com/JignashaVanara/POC/tree/master/Screenshots)
+
+[Link for screenshots](https://github.com/JignashaVanara/POC/tree/master/Screenshots)
 
 ## Help
 
